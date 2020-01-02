@@ -8,6 +8,9 @@ import { RightComponent } from './components/right/right.component';
 import { BodyComponent} from './components/body/body.component';
 import { HeadComponent} from './components/head/head.component';
 import { FooterComponent} from './components/footer/footer.component';
+import { ImageComponent } from './components/head/image/image.component';
+import { ContactComponent } from './components/contact/contact.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +18,10 @@ import { FooterComponent} from './components/footer/footer.component';
     RightComponent,
     BodyComponent,
     HeadComponent,
-    FooterComponent
+    FooterComponent,
+    ImageComponent,
+    ContactComponent
+
 
   ],
   imports: [
