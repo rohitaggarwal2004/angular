@@ -11,6 +11,7 @@ import { FooterComponent} from './components/footer/footer.component';
 import { ImageComponent } from './components/head/image/image.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CertificationsComponent } from './components/certifications/certifications.component';
+import { LinkedinComponent } from './components/linkedin/linkedin.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CertificationsComponent } from './components/certifications/certificati
     FooterComponent,
     ImageComponent,
     ContactComponent,
-    CertificationsComponent
+    CertificationsComponent,
+    LinkedinComponent
 
 
   ],

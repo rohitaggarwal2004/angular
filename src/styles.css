@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+.image{
+         height:100%;
+         width:100%; 
+         background-size:cover;
+         width:auto;
+         background-position:100% 100%;
+       }
