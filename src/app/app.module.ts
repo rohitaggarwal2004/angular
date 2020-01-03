@@ -10,6 +10,7 @@ import { HeadComponent} from './components/head/head.component';
 import { FooterComponent} from './components/footer/footer.component';
 import { ImageComponent } from './components/head/image/image.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { CertificationsComponent } from './components/certifications/certifications.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactComponent } from './components/contact/contact.component';
     HeadComponent,
     FooterComponent,
     ImageComponent,
-    ContactComponent
+    ContactComponent,
+    CertificationsComponent
 
 
   ],
