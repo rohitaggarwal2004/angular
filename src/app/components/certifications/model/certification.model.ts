@@ -4,12 +4,16 @@ export class Certification
  public description;
  public year;
  public imagePath: String;
- public data :String
+ public data :String;
+ public names :String;
  constructor(name:String, description:String, imagePath:String,year :String) {
  	this.name=name;
  	this.description = description;
  	this.imagePath=imagePath;
  	this.year = year;
+ 	this.names = year;
   }
+  
+  
  
 }

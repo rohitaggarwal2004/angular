@@ -9,37 +9,30 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./certifications.component.css']
 })
 export class CertificationsComponent implements OnInit {
-	
-  certifications: Certification[] =[
-  new Certification("11","22","./model/gcp.png","2019")
-  ];	
-   restItems: any;
-  restItemsUrl = 'http://roaggarw-lap.oradev.oraclecorp.com:9001/s1/s1/hello';
-  
-  constructor(private http: HttpClient) {}
- 
-  bye(){    
-   this.getRestItems();   
-  } 
+   restItems: Certification[];
+   restItemsUrl = 'http://roaggarw-lap.oradev.oraclecorp.com:8888/certificates/list';
+   constructor(private http: HttpClient) {}
+   bye(){    
+	   this.getCertifications();   
+	} 
   
   ngOnInit() {
+   this.getCertifications(); 
   }
 	
 	 // Read all REST Items
-  getRestItems(): void {
-    this.restItemsServiceGetRestItems()
+  getCertifications(): void {
+    this.getCertificationItems()
       .subscribe(
         restItems => {
-          this.restItems = restItems;
-          alert(restItems);
-         
+          this.restItems =<Certification[]>restItems;
+          console.log(this.restItems); 
         }
-        
       )
   }
   
    // Rest Items Service: Read all REST Items
-  restItemsServiceGetRestItems() {
+  getCertificationItems() {
     return this.http
       .get<any[]>(this.restItemsUrl)
       .pipe(map(data => data));

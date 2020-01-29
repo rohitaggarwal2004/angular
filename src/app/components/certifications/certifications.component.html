@@ -1,22 +1,22 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
-			<button class="btn btn-sucess" (click)="bye()">Certifications.</button>
-		</div>
-
-		<div class="col-xs-12">
-			<a href="#" class="list-group-item clearfix"
-				*ngFor="let certification of certifications">
-				<div class="pull-left">
-					<h4 class="list-group-item-heading">{{certification.name}}</h4>
-					<p class="list-group-item-text">{{certification.description}}</p>
-					<p class="list-group-item-text">{{certification.year}}</p>
-				</div> 
-				 <span class="pull-right"> <img
-					src="{{certification.imagePath}}" alt="{{certification.name}}"
-					class="img-responsive" style="max-height: 50px;">
-				</span>
-			</a>
+			<table class="table">
+				<thead>
+					<th>Certification Description</th>
+					<th>Certification Name</th>
+					<th>Year</th>
+					<th>Image</th>
+				</thead>
+				<tbody>
+					<tr *ngFor="let certification of restItems">
+						<td>{{certification.name}}</td>
+						<td>{{certification.description}}</td>
+						<td>{{certification.year}}</td>
+						<td>{{certification.imagePath}}</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 </div>

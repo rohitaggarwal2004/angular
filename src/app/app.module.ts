@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {FormsModule} from '@angular/forms';
+
 import { LeftComponent } from './components/left/left.component';
 import { RightComponent } from './components/right/right.component';
 import { BodyComponent} from './components/body/body.component';
@@ -12,6 +14,7 @@ import { ImageComponent } from './components/head/image/image.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CertificationsComponent } from './components/certifications/certifications.component';
 import { LinkedinComponent } from './components/linkedin/linkedin.component';
+import { ContactmeComponent } from './components/contactme/contactme.component';
 
 @NgModule({
   declarations: [
@@ -24,14 +27,17 @@ import { LinkedinComponent } from './components/linkedin/linkedin.component';
     ImageComponent,
     ContactComponent,
     CertificationsComponent,
-    LinkedinComponent
+    LinkedinComponent,
+    ContactmeComponent
+    
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
