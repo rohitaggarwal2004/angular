@@ -1,0 +1,36 @@
+
+<div class="container">
+	<div class="row">{{greetings}} {{message}}</div>
+	<div class="row">
+		<form  >
+			<div class="field">
+				<input type="text" name="fname" class="input" [disabled]="disabled" [(ngModel)]="fname"
+					placeholder="Your First name">{{fname}}
+			</div>
+			<div class="field">
+				<input type="text" name="lname" class="input" [disabled]="disabled"
+					placeholder="Your Last name" [(ngModel)]="lname">{{lname}}
+			</div>
+			<div class="field">
+				<input type="email" name="email" class="input" [disabled]="disabled"  [(ngModel)]="email"
+					placeholder="Your Your email">{{email}}
+			</div>
+			<div class="field">
+				<input type="text" name="phone" class="input" [disabled]="disabled"  [(ngModel)]="phone"
+					placeholder="Your Your phone">{{phone}}
+			</div>
+			<div class="field">
+				<textarea type="textextra" name="comment" class="input"  [(ngModel)]="comment"
+					[disabled]="disabled" placeholder="Your comment/query" ></textarea>{{comment}}
+			</div>
+			<button type="submit" class="btn btn-primary" (click)="saveInfo()" >Submit</button>
+			
+		
+		</form>
+	</div>
+
+	<div class="row">{{getNote()}}</div>
+
+</div>
+
+
